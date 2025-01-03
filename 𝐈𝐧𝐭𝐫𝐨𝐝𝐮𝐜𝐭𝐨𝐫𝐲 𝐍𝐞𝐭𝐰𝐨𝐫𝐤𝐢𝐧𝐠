@@ -116,3 +116,21 @@
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 𝐓𝐚𝐬𝐤 𝟔 :<>: |𝑵𝒆𝒕𝒘𝒐𝒓𝒌𝒊𝒏𝒈 𝑻𝒐𝒐𝒍𝒔| 𝐓𝐫𝐚𝐜𝐞𝐑𝐨𝐮𝐭𝐞
 
+   \1/ Can you see the path your request has taken?   ( Use traceroute on tryhackme.com )
+        // No answer needed
+
+   \2/ What switch would you use to specify an interface when using Traceroute?
+        >> -i
+              Hint :: An interface is provided by your NIC -- common interfaces are things like tunnels for VPN connections, ethernet connections, and wireless connections
+
+   \3/ What switch would you use if you wanted to use TCP SYN requests when tracing the route?
+        >> -T
+
+   \4/ [Lateral Thinking] Which layer of the TCP/IP model will traceroute run on by default (Windows)?
+        >> Internet
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+𝐓𝐚𝐬𝐤 𝟕 :<>: |𝑵𝒆𝒕𝒘𝒐𝒓𝒌𝒊𝒏𝒈 𝑻𝒐𝒐𝒍𝒔| 𝐖𝐇𝐎𝐈𝐒
+
+
+
