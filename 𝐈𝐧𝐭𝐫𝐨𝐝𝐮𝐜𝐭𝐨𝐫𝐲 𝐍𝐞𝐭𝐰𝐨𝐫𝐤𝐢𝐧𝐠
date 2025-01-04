@@ -1,5 +1,5 @@
 
-<><><><><><><>><><><><><><><><<><><><><><>
+<><><><><><><>><><><><><><><><<><><><><><><><><><><><><>><><><><><><><><<><><><><><><><><><><><><>><><><><><><><><<><><><><><>
 
 𝐓𝐚𝐬𝐤 𝟏 :<>: 𝐈𝐧𝐭𝐫𝐨𝐝𝐮𝐜𝐭𝐢𝐨𝐧
     //- No Questions to answer.
@@ -132,5 +132,54 @@
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 𝐓𝐚𝐬𝐤 𝟕 :<>: |𝑵𝒆𝒕𝒘𝒐𝒓𝒌𝒊𝒏𝒈 𝑻𝒐𝒐𝒍𝒔| 𝐖𝐇𝐎𝐈𝐒
 
+   \1/ Perform a whois search on facebook.com
+        >> No answer needed
 
+   \2/What is the registrant postal code for facebook.com?
+        >> 94025
+ 
+   \3/ When was the facebook.com domain first registered (Format: DD/MM/YYYY)?
+        >> 29/03/1997
+ 
+   \4/ Perform a whois search on microsoft.com
+       (Note: Please ensure you have read the task above before attempting the next questions.)
+        >> No answer needed
+ 
+   \5/ Which city is the registrant based in?
+        >> Redmond
+ 
+   \6/ [OSINT] What is the name of the golf course that is near the registrant address for microsoft.com?
+        >> Bellevue Golf Course
+ 
+   \7/ What is the registered Tech Email for microsoft.com?
+        >> msnhst@microsoft.com
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+𝐓𝐚𝐬𝐤 𝟖 :<>: |𝑵𝒆𝒕𝒘𝒐𝒓𝒌𝒊𝒏𝒈 𝑻𝒐𝒐𝒍𝒔| 𝐃𝐢𝐠
+
+   \1/ What is DNS short for?  
+        >> Domain Name System
+ 
+   \2/ What is the first type of DNS server your computer would query when you search for a domain?
+        >> Recursive
+ 
+   \3/ What type of DNS server contains records specific to domain extensions (i.e. .com, .co.uk*, etc)*? Use the long version of the name.
+        >> Top-Level Domain
+ 
+   \4/ Where is the very first place your computer would look to find the IP address of a domain?
+        >> Hosts File
+                   Hint :: Read the provided information carefully. This question refers to a system which is older than (and completely separate from) DNS.
+
+   \5/ [Research] Google runs two public DNS servers. One of them can be queried with the IP 8.8.8.8, what is the IP address of the other one?
+        >> 8.8.4.4
+ 
+   \6/ If a DNS query has a TTL of 24 hours, what number would the dig query show?
+        >> 86400
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+𝐓𝐚𝐬𝐤 𝟗 :<>: 𝐅𝐮𝐫𝐭𝐡𝐞𝐫 𝐑𝐞𝐚𝐝𝐢𝐧𝐠
+                //> No answer needed
+
+
+<><><><><><><>><><><><><><><><<><><><><><><><><><><><><>><><><><><><><><<><><><><><><><><><><><><>><><><><><><><><<><><><><><>
 
