@@ -51,5 +51,43 @@
    \4/ What response code might you receive if you try to edit your profile without logging in first?
         >> 401
 
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+𝐓𝐚𝐬𝐤 𝟓 :<>: 𝐇𝐞𝐚𝐝𝐞𝐫𝐬
 
-  
+   \1/ What header tells the web server what browser is being used?
+        >> User-Agent
+
+   \2/ What header tells the browser what type of data is being returned?
+        >> Content-Type
+
+   \3/ What header tells the web server which website is being requested?
+        >> Host
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+𝐓𝐚𝐬𝐤 𝟔 :<>: 𝐂𝐨𝐨𝐤𝐢𝐞𝐬
+
+   \1/ Which header is used to save cookies to your computer?
+        >> Set-Cookie
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+𝐓𝐚𝐬𝐤 𝟕 :<>: 𝐌𝐚𝐤𝐢𝐧𝐠 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐬
+
+   \1/ Make a GET request to /room
+        >> THM{YOU'RE_IN_THE_ROOM}
+
+   \2/ Make a GET request to /blog and using the gear icon set the id parameter to 1 in the URL field
+        >> THM{YOU_FOUND_THE_BLOG}
+ 
+   \3/ Make a DELETE request to /user/1
+        >> THM{USER_IS_DELETED}
+ 
+   \4/ Make a PUT request to /user/2 with the username parameter set to admin
+        >> THM{USER_HAS_UPDATED}
+ 
+   \5/ POST the username of thm and a password of letmein to /login
+        >> THM{HTTP_REQUEST_MASTER}
+
+
+<><><><><><><>><><><><><><><><<><><><><><><><><><><><><>><><><><><><><><<><><><><><><><><><><><><>><><><><><><><><<><><><><><>
+
+
