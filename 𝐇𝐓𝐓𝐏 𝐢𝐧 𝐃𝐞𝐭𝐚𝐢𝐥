@@ -1,0 +1,55 @@
+
+<><><><><><><>><><><><><><><><<><><><><><><><><><><><><>><><><><><><><><<><><><><><><><><><><><><>><><><><><><><><<><><><><><>
+
+𝐓𝐚𝐬𝐤 𝟏 :<>: 𝐖𝐡𝐚𝐭 𝐢𝐬 𝐇𝐓𝐓𝐏(𝐒)?
+
+   \1/ What does HTTP stand for?
+         >> HyperText Transfer Protocol
+
+   \2/ What does the S in HTTPS stand for?
+         >> Secure
+
+   \3/ On the mock webpage on the right there is an issue, once you've found it, click on it. What is the challenge flag?
+         >> THM{INVALID_HTTP_CERT}
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+𝐓𝐚𝐬𝐤 𝟐 :<>: 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐬 𝐀𝐧𝐝 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞𝐬
+
+   \1/ What HTTP protocol is being used in the above example?
+         >> HTTP/1.1
+
+   \2/ What response header tells the browser how much data to expect?
+         >> Content-Length
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+𝐓𝐚𝐬𝐤 𝟑 :<>: 𝐇𝐓𝐓𝐏 𝐌𝐞𝐭𝐡𝐨𝐝𝐬
+
+   \1/ What method would be used to create a new user account?
+        >> POST
+
+   \2/ What method would be used to update your email address?
+        >> PUT
+
+   \3/ What method would be used to remove a picture you've uploaded to your account?
+        >> DELETE
+
+   \4/ What method would be used to view a news article?
+        >> GET
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+𝐓𝐚𝐬𝐤 𝟒 :<>: 𝐇𝐓𝐓𝐏 𝐒𝐭𝐚𝐭𝐮𝐬 𝐂𝐨𝐝𝐞𝐬
+
+   \1/ What response code might you receive if you've created a new user or blog post article?
+        >> 201
+
+   \2/ What response code might you receive if you've tried to access a page that doesn't exist?
+        >> 404
+
+   \3/ What response code might you receive if the web server cannot access its database and the application crashes?
+        >> 503
+
+   \4/ What response code might you receive if you try to edit your profile without logging in first?
+        >> 401
+
+
+  
