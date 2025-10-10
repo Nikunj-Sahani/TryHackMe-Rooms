@@ -61,7 +61,7 @@ It shows **Three** open Ports
 <div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-2.png" alt="Sample Image"></div>
 
 ---
-## Web Server
+##  1. Web Server
 With both http and https we get presented with a cool animation of a linux terminal booting up and Mr Robot logging in.
 > - http://x.x.xx.xx **(Web Server)**
 
@@ -93,7 +93,7 @@ Searched - *http://x.x.xx.xx/robots.txt*
 <div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-5.png" alt="Sample Image"></div>
 
 ---
-## 1. Opening First Key
+## Opening First Key
 Searched - *http://x.x.xx.xx/key-1-of-3.txt*
 
    - [ ] **073403c8a58a1f80d943455fb30724b9** *( First Key )*
@@ -101,3 +101,76 @@ Searched - *http://x.x.xx.xx/key-1-of-3.txt*
 <div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-6.png" alt="Sample Image"></div>
 
 ---
+## Enter Keys in TryHackMe
+- What is key 1?
+- [ ] **073403c8a58a1f80d943455fb30724b9** *( First Key )*
+      
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-7.png" alt="Sample Image"></div>
+
+---
+## Login Page Found
+When we done Dirb Scan, There is a login directory.
+- I quickly found the **Word Press login page** 
+ > - http://x.x.xx.xx/wp-login.php
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-8.png" alt="Sample Image"></div>
+
+---
+## Username & Password Finding
+When we done Dirb Scan, There is a **directory of license.**
+> - http://x.x.xx.xx/license
+- When i scroll down the page, i got a **Hash key**.
+- [ ] ZWxsaW900kVSMjgtMDY1Mgo=
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-9.png" alt="Sample Image"></div>
+
+---
+## Hash Decryption
+A website used for descrypting the hash.
+Go on [ CyberChef ](https://gchq.github.io/CyberChef/)
+
+- Recipe - **From base64**
+- Hash Key in Input- **ZWxsaW900kVSMjgtMDY1Mgo=**
+- Decrypt Key - **elliot : ER28-0652**
+  
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-10.png" alt="Sample Image"></div>
+
+---
+## Wordpress Page Logged in 
+This is interface/dashboard of the logged in website.
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-11.png" alt="Sample Image"></div>
+
+---
+## Upload shell
+Steps to go for Editing
+- [ ] **Appearance ➡️ Editor ➡️ 404 Template ➡️ Clear the text**
+
+The used shell is PentestMonkey
+Now Copy code of **Monkey pentest reverse shell**
+- [ ] Go on [ Reverse Shell Code ](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php)
+
+- **Paste the code in 404 Template**
+  > - Change the default IP to your Linix IP.
+  > - Change Port to listen & connection
+
+---
+## Set up Listener
+Once this is Done and saved, I open Kali terminal 
+> - cmd : **nc-nvlp 8888**
+- Listen for connection attempt from the target machine.
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-12.png" alt="Sample Image"></div>
+
+---
+## Refresh the page for Connection
+Go to this page
+> - Address - **https://x.x.xx.xx/wp-content/themes/twentyfifteen/404.php**
+- **When we enter this page, reverse connection initiated**
+
+<div ><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-13.png" alt="Sample Image"></div>
+
+---
+## Connection Recieved
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-14.png" alt="Sample Image"></div>
