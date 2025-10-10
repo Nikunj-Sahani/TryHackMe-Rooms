@@ -101,14 +101,14 @@ Searched - *http://x.x.xx.xx/key-1-of-3.txt*
 <div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-6.png" alt="Sample Image"></div>
 
 ---
-## Enter Keys in TryHackMe
+## Enter 1st Key on TryHackMe
 - What is key 1?
 - [ ] **073403c8a58a1f80d943455fb30724b9** *( First Key )*
       
 <div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-7.png" alt="Sample Image"></div>
 
 ---
-## Login Page Found
+## 2. Login Page Found
 When we done Dirb Scan, There is a login directory.
 - I quickly found the **Word Press login page** 
  > - http://x.x.xx.xx/wp-login.php
@@ -154,13 +154,15 @@ Now Copy code of **Monkey pentest reverse shell**
   > - Change the default IP to your Linix IP.
   > - Change Port to listen & connection
 
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-12.png" alt="Sample Image"></div>
+
 ---
 ## Set up Listener
 Once this is Done and saved, I open Kali terminal 
 > - cmd : **nc-nvlp 8888**
 - Listen for connection attempt from the target machine.
 
-<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-12.png" alt="Sample Image"></div>
+<div ><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-13.png" alt="Sample Image"></div>
 
 ---
 ## Refresh the page for Connection
@@ -168,9 +170,87 @@ Go to this page
 > - Address - **https://x.x.xx.xx/wp-content/themes/twentyfifteen/404.php**
 - **When we enter this page, reverse connection initiated**
 
-<div ><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-13.png" alt="Sample Image"></div>
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-14.png" alt="Sample Image"></div>
 
 ---
 ## Connection Recieved
+The connection is completed.
+- This initiates the session and give limited shell access on the target with user ‘daemon’.
 
-<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-14.png" alt="Sample Image"></div>
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-15.png" alt="Sample Image"></div>
+
+---
+## Key Finding in Daemon User
+Sticking to the goal and following the same pattern of key files, 
+- I quick check file system with command then i found 2 file
+   > -  key-2-of-3.txt
+   > -  Password.raw-md5
+  
+- ** key-2-of-3.txt.** It was in robot’s directory, So it not open with daemon user. 
+  > - For key file — **Access denied..**
+
+- Then open 2nd file — **Password.raw-md5**
+> - c3fcd3d76192e4007dfb496cca67e13b **(A hash key Found)**
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-16.png" alt="Sample Image"></div>
+
+---
+## CrackStation (Hash Decryptor)
+Enter hash Value and decrypt it.
+- **Hash value :** c3fcd3d76192e4007dfb496cca67e13b
+- [ ] Decrypted key : **abcdefghijklmnopqrstuvwxyz**
+      
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-17.png" alt="Sample Image"></div>
+
+---
+## Robot Login
+Switch user to robot
+ > - cmd : **su robot**
+ > - password : **abcdefghijklmnopqrstuvwxyz**
+Logged in Succesfully
+- Then i try to **open Key 2.**
+- cmd : *cat key-2-of-3.txt*
+> -  **822c73956184f694993bede3eb39f959** *(2nd Key)*
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-18.png" alt="Sample Image"></div>
+
+---
+## Enter 2nd Key on TryHackMe
+- What is key 2?
+- [ ] **822c73956184f694993bede3eb39f959** *( Second Key )*
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-19.png" alt="Sample Image"></div>
+
+---
+## 3. Root Access
+I found there is a vulnerability in Nmap,
+
+- I set into interactive mode and allows you to run shell commands directly in nmap.
+- Cmd used
+> - **nmap --interactive**
+> - **!sh**
+> - **id**
+Then we enter in root user
+- cmd : **cd /root**  (I am now root.)
+- cat key-3-of-3.txt
+> - **04787ddef27c3dee1ee161b21670b4e4** *(Third Key)*
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-20.png" alt="Sample Image"></div>
+
+---
+## Enter 3rd Key on TryHackMe
+- What is key 2?
+- [ ] **04787ddef27c3dee1ee161b21670b4e4** *( Third Key )*
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-21.png" alt="Sample Image"></div>
+
+---
+---
+## ⛳ LAB SOLVED ⛳
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-Final.png" alt="Sample Image"></div>
+
+## 👨‍🎓 Badge Earned on TryHackMe
+
+<div style="text-align: right;"><img src="https://github.com/Nikunj-Sahani/TryHackMe-Rooms/blob/main/Images/Robot-badge.png" alt="Sample Image"></div>
+
